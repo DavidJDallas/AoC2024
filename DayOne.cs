@@ -32,12 +32,15 @@ public class DayOne
     
     private List<(int, int)> MergeLists(List<int> procesedListLeftSide, List<int> processedListRightSide)
     {
-        return procesedListLeftSide.Zip(processedListRightSide).ToList();
+        return procesedListLeftSide
+            .Zip(processedListRightSide)
+            .ToList();
     }
 
     private int FindSimilarityScore(List<int> procesedListLeftSide, List<int> processedListRightSide)
     {
-        return procesedListLeftSide.Sum(leftSideInt => leftSideInt * processedListRightSide.Count(rightSideInt => rightSideInt.Equals(leftSideInt)));
+        return procesedListLeftSide
+            .Sum(leftSideInt => leftSideInt * processedListRightSide.Count(rightSideInt => rightSideInt.Equals(leftSideInt)));
         
     }
 
