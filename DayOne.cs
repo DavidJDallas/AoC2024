@@ -32,38 +32,17 @@ public class DayOne
     
     private List<(int, int)> MergeLists(List<int> procesedListLeftSide, List<int> processedListRightSide)
     {
-        var mergedList = new List<(int, int)> { };
-        for (int i = 0; i< procesedListLeftSide.Count; i ++)
-        {
-            mergedList.Add((procesedListLeftSide[i], processedListRightSide[i]));
-        }
-        return mergedList;
+        return procesedListLeftSide.Zip(processedListRightSide).ToList();
     }
 
     private int FindSimilarityScore(List<int> procesedListLeftSide, List<int> processedListRightSide)
     {
-        int similarityScore = 0;
-
-        foreach (var value in procesedListLeftSide)
-        {
-            var numberOfAppearancesInRightList = processedListRightSide.Count(x => x.Equals(value));
-            int temporarySimilarityScore = value * numberOfAppearancesInRightList;
-            similarityScore += temporarySimilarityScore;
-        }
-
-        return similarityScore;
+        return procesedListLeftSide.Sum(leftSideInt => leftSideInt * processedListRightSide.Count(rightSideInt => rightSideInt.Equals(leftSideInt)));
+        
     }
 
     private int FindTotalDifference(List<(int, int)> mergedList)
     {
-        int totalDifference = 0;
-        
-        foreach (var item in mergedList)
-        {
-            var difference = Math.Abs(item.Item1 - item.Item2);
-            totalDifference += difference;
-        }
-
-        return totalDifference;
+        return mergedList.Sum(x => Math.Abs(x.Item1 - x.Item2));
     }
 }

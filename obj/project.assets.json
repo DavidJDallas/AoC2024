@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/daviddallas/AdventOfCode/AoC/AoC/AoC.csproj",
+      "projectUniqueName": "/Users/daviddallas/AoC2024/AoC.csproj",
       "projectName": "AoC",
-      "projectPath": "/Users/daviddallas/AdventOfCode/AoC/AoC/AoC.csproj",
+      "projectPath": "/Users/daviddallas/AoC2024/AoC.csproj",
       "packagesPath": "/Users/daviddallas/.nuget/packages/",
-      "outputPath": "/Users/daviddallas/AdventOfCode/AoC/AoC/obj/",
+      "outputPath": "/Users/daviddallas/AoC2024/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/daviddallas/.nuget/NuGet/NuGet.Config"
@@ -26,6 +26,7 @@
         "net8.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -59,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
